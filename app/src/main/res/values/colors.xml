@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="steel_blue">#515169</color>
+    <color name="bone_white">#FFFFFF</color>
+    <color name="colorPrimary">#0cac77</color>
+    <color name="colorPrimaryDark">#73ac95</color>
+    <color name="colorAccent">#20efd6</color>
+</resources>
