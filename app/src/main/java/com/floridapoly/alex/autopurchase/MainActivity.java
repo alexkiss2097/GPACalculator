@@ -10,25 +10,34 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 /**
  * Created by Alex on 10/10/17.
  */
 
 public class MainActivity extends Activity {
-    // THE AUTO OBJECT CONTAINS THE INFORMATION ABOUT THE VEHICLE BEING PURCHASED
+    // THE GPA OBJECT CONTAINS THE INFORMATION ABOUT THE GPA
     GPA mGPA;
 
-    // THE DATA TO BE PASSED TO THE LOAN ACTIVITY
-    String loanReport;
-    String monthlyPayment;
+    // THE DATA TO BE PASSED TO THE GPA SUMMARY ACTIVITY
+    String creditHours;
+    String totalGPA;
+    String gradePoints;
 
     // LAYOUT INPUT REFERENCES
     private EditText courseET1;
     private EditText courseET2;
     private EditText courseET3;
     private EditText courseET4;
-    private RadioGroup loanTermRG;
+    private Spinner creditSpinner1;
+    private Spinner creditSpinner2;
+    private Spinner creditSpinner3;
+    private Spinner creditSpinner4;
+    private Spinner gradeSpinner1;
+    private Spinner gradeSpinner2;
+    private Spinner gradeSpinner3;
+    private Spinner gradeSpinner4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,29 +45,51 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main_layout);
 
         //ESTABLISH REFERENCES TO EDITABLE TEXT FIELDS AND RADIO BUTTON
-        carPriceET = (EditText) findViewById(R.id.editText1);
-        downPayET = (EditText) findViewById(R.id.editText2);
-        loanTermRG = (RadioGroup) findViewById(R.id.radioGroup1);
+        courseET1 = (EditText) findViewById(R.id.editText1);
+        courseET2 = (EditText) findViewById(R.id.editText2);
+        courseET3 = (EditText) findViewById(R.id.editText3);
+        courseET4 = (EditText) findViewById(R.id.editText4);
+
+        creditSpinner1 = (Spinner) findViewById(R.id.spinner1);
+        creditSpinner2 = (Spinner) findViewById(R.id.spinner2);
+        creditSpinner3 = (Spinner) findViewById(R.id.spinner3);
+        creditSpinner4 = (Spinner) findViewById(R.id.spinner4);
+
+        gradeSpinner1 = (Spinner) findViewById(R.id.spinner5);
+        gradeSpinner2 = (Spinner) findViewById(R.id.spinner6);
+        gradeSpinner3 = (Spinner) findViewById(R.id.spinner7);
+        gradeSpinner4 = (Spinner) findViewById(R.id.spinner8);
+
 
         //CREATE AN AUTOMOBILE OBJECT TO STORE AUTO DATA
         mGPA = new GPA();
     }
 
-    private void collectAutoInputData() {
-        // TASK 1: SET THE CAR PRICE
-        mGPA.setPrice ((double) Integer.valueOf(carPriceET.getText()
+    private void collectGPAInputData() {
+        // TASK 1: SET THE COURSE NAME
+        mGPA.setCourseName1 ((String) String.valueOf(courseET1.getText()
                 .toString()));
 
-        //TASK 2: SET THE DOWN PAYMENT
-        mGPA.setDownPayment((double)
-                Integer.valueOf(downPayET.getText()
+        mGPA.setCourseName2 ((String) String.valueOf(courseET2.getText()
+                .toString()));
+
+        mGPA.setCourseName3 ((String) String.valueOf(courseET3.getText()
+                .toString()));
+
+        mGPA.setCourseName4 ((String) String.valueOf(courseET4.getText()
+                .toString()));
+
+        //TASK 2: SET THE CREDIT HOURS
+        mGPA.setCredits((int)
+                Integer.valueOf(creditSpinner1.getText()
                         .toString()));
 
-        //TASK 3 SET THE LOAN TERM
+        //TASK 3 SET THE GRADES
         Integer radioId = loanTermRG.getCheckedRadioButtonId();
         RadioButton term = (RadioButton) findViewById(radioId);
         mGPA.setLoanTerm(term.getText().toString());
     }
+
     private void buildLoanReport() {
         // TASK 1: CONSTRUCT THE MONTHLY PAYMENT
         Resources res = getResources();

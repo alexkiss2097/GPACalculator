@@ -14,11 +14,35 @@ public class GPA {
         return mCredits;
     }
 
-    public void setCourseName(String courseName) {
+    public void setCourseName1(String courseName) {
         mCourseName = courseName;
     }
 
-    public String getCourseName() {
+    public String getCourseName1() {
+        return mCourseName;
+    }
+
+    public void setCourseName2(String courseName) {
+        mCourseName = courseName;
+    }
+
+    public String getCourseName2() {
+        return mCourseName;
+    }
+
+    public void setCourseName3(String courseName) {
+        mCourseName = courseName;
+    }
+
+    public String getCourseName3() {
+        return mCourseName;
+    }
+
+    public void setCourseName4(String courseName) {
+        mCourseName = courseName;
+    }
+
+    public String getCourseName4() {
         return mCourseName;
     }
 

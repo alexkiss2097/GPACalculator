@@ -27,7 +27,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/courseET1"
+                android:id="@+id/editText1"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -38,14 +38,14 @@
                 android:inputType="textPersonName" />
 
             <Spinner
-                android:id="@+id/creditSpinner1"
+                android:id="@+id/spinner1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/credit_spinner_arrays"
                 android:prompt="@string/credit_spinner_prompt" />
 
             <Spinner
-                android:id="@+id/gradeSpinner1"
+                android:id="@+id/spinner5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/grade_spinner_arrays"
@@ -57,7 +57,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/courseET2"
+                android:id="@+id/editText2"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -68,14 +68,14 @@
                 android:inputType="textPersonName" />
 
             <Spinner
-                android:id="@+id/creditSpinner2"
+                android:id="@+id/spinner2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/credit_spinner_arrays"
                 android:prompt="@string/credit_spinner_prompt" />
 
             <Spinner
-                android:id="@+id/gradeSpinner2"
+                android:id="@+id/spinner6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/grade_spinner_arrays"
@@ -87,7 +87,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/courseET3"
+                android:id="@+id/editText3"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -98,18 +98,18 @@
                 android:inputType="textPersonName" />
 
             <Spinner
-                android:id="@+id/creditSpinner3"
+                android:id="@+id/spinner3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/credit_spinner_arrays"
                 android:prompt="@string/credit_spinner_prompt" />
 
             <Spinner
-                android:id="@+id/gradeSpinner3"
+                android:id="@+id/spinner7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/grade_spinner_arrays"
-                android:prompt="@string/grade_spinner_prompt"/>
+                android:prompt="@string/grade_spinner_prompt" />
         </TableRow>
 
         <TableRow
@@ -117,7 +117,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/courseET4"
+                android:id="@+id/editText4"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -128,18 +128,18 @@
                 android:inputType="textPersonName" />
 
             <Spinner
-                android:id="@+id/creditSpinner4"
+                android:id="@+id/spinner4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/credit_spinner_arrays"
                 android:prompt="@string/credit_spinner_prompt" />
 
             <Spinner
-                android:id="@+id/gradeSpinner4"
+                android:id="@+id/spinner8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/grade_spinner_arrays"
-                android:prompt="@string/grade_spinner_prompt"/>
+                android:prompt="@string/grade_spinner_prompt" />
         </TableRow>
     </TableLayout>
 
