@@ -10,7 +10,7 @@ import android.widget.TextView;
  * Created by Alex on 10/10/17.
  */
 
-public class LoanSummaryActivity extends Activity {
+public class GPASummaryActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

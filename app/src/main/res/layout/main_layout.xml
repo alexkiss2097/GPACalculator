@@ -17,11 +17,10 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="16dp"
-        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="25dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -29,7 +28,7 @@
 
             <EditText
                 android:id="@+id/courseET1"
-                android:layout_width="130dp"
+                android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -38,16 +37,75 @@
                 android:hint="@string/hint_course_name"
                 android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/creditET1"
-                android:layout_width="125dp"
+            <Spinner
+                android:id="@+id/creditSpinner1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint_credit_hours"
-                android:inputType="numberDecimal" />
+                android:entries="@array/credit_spinner_arrays"
+                android:prompt="@string/credit_spinner_prompt" />
 
             <Spinner
                 android:id="@+id/gradeSpinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/grade_spinner_arrays"
+                android:prompt="@string/grade_spinner_prompt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/courseET2"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:hint="@string/hint_course_name"
+                android:inputType="textPersonName" />
+
+            <Spinner
+                android:id="@+id/creditSpinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/credit_spinner_arrays"
+                android:prompt="@string/credit_spinner_prompt" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/grade_spinner_arrays"
+                android:prompt="@string/grade_spinner_prompt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/courseET3"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:hint="@string/hint_course_name"
+                android:inputType="textPersonName" />
+
+            <Spinner
+                android:id="@+id/creditSpinner3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/credit_spinner_arrays"
+                android:prompt="@string/credit_spinner_prompt" />
+
+            <Spinner
+                android:id="@+id/gradeSpinner3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/grade_spinner_arrays"
@@ -59,66 +117,8 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/courseET2"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:ems="10"
-                android:hint="@string/hint_course_name"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/creditET2"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint_credit_hours"
-                android:inputType="numberDecimal" />
-
-            <Spinner
-                android:id="@+id/gradeSpinner2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/courseET3"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:ems="10"
-                android:hint="@string/hint_course_name"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/creditET3"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint_credit_hours"
-                android:inputType="numberDecimal" />
-
-            <Spinner
-                android:id="@+id/gradeSpinner3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
                 android:id="@+id/courseET4"
-                android:layout_width="130dp"
+                android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -127,24 +127,25 @@
                 android:hint="@string/hint_course_name"
                 android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/creditET4"
-                android:layout_width="125dp"
+            <Spinner
+                android:id="@+id/creditSpinner4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint_credit_hours"
-                android:inputType="numberDecimal" />
+                android:entries="@array/credit_spinner_arrays"
+                android:prompt="@string/credit_spinner_prompt" />
 
             <Spinner
                 android:id="@+id/gradeSpinner4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:entries="@array/grade_spinner_arrays"
+                android:prompt="@string/grade_spinner_prompt"/>
         </TableRow>
     </TableLayout>
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

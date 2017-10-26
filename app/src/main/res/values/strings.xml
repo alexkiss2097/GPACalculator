@@ -5,12 +5,29 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Layout Label Strings -->
+    <string name="title_activity_main">GPA Calculator</string>
     <string name="calculate_btn">Calculate GPA</string>
+    <string name="return_btn">Return to Course Entry</string>
     <string name="hint_course_name">Course Name</string>
     <string name="hint_credit_hours">Credit Hours</string>
     <string name="grade_spinner_prompt">Grade</string>
+    <string name="credit_spinner_prompt">Credits</string>
 
-    <!-- Spinner Options -->
+    <!-- GPA Summary Reports -->
+    <string name="report_total_grade_points"> \n\tCar Sticker Price: $</string>
+    <string name="report_total_credits_attempted"> \n\tYou will put down: $</string>
+    <string name="report_gpa"> \n\tLoan Term is </string>
+
+    <!-- Credit Spinner Options -->
+    <string-array name="credit_spinner_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- Grade Spinner Options -->
     <string-array name="grade_spinner_arrays">
         <item>A</item>
         <item>A-</item>

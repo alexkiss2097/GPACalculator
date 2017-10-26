@@ -17,15 +17,17 @@ import android.widget.RadioGroup;
 
 public class MainActivity extends Activity {
     // THE AUTO OBJECT CONTAINS THE INFORMATION ABOUT THE VEHICLE BEING PURCHASED
-    Auto mAuto;
+    GPA mGPA;
 
     // THE DATA TO BE PASSED TO THE LOAN ACTIVITY
     String loanReport;
     String monthlyPayment;
 
     // LAYOUT INPUT REFERENCES
-    private EditText carPriceET;
-    private EditText downPayET;
+    private EditText courseET1;
+    private EditText courseET2;
+    private EditText courseET3;
+    private EditText courseET4;
     private RadioGroup loanTermRG;
 
     @Override
@@ -39,47 +41,47 @@ public class MainActivity extends Activity {
         loanTermRG = (RadioGroup) findViewById(R.id.radioGroup1);
 
         //CREATE AN AUTOMOBILE OBJECT TO STORE AUTO DATA
-        mAuto = new Auto();
+        mGPA = new GPA();
     }
 
     private void collectAutoInputData() {
         // TASK 1: SET THE CAR PRICE
-        mAuto.setPrice ((double) Integer.valueOf(carPriceET.getText()
+        mGPA.setPrice ((double) Integer.valueOf(carPriceET.getText()
                 .toString()));
 
         //TASK 2: SET THE DOWN PAYMENT
-        mAuto.setDownPayment((double)
+        mGPA.setDownPayment((double)
                 Integer.valueOf(downPayET.getText()
                         .toString()));
 
         //TASK 3 SET THE LOAN TERM
         Integer radioId = loanTermRG.getCheckedRadioButtonId();
         RadioButton term = (RadioButton) findViewById(radioId);
-        mAuto.setLoanTerm(term.getText().toString());
+        mGPA.setLoanTerm(term.getText().toString());
     }
     private void buildLoanReport() {
         // TASK 1: CONSTRUCT THE MONTHLY PAYMENT
         Resources res = getResources();
         monthlyPayment = res.getString(R.string.report_line1)
-                + String.format("%.02f", mAuto.monthlyPayment());
+                + String.format("%.02f", mGPA.monthlyPayment());
 
 
         // TASK 2: CONSTRUCT THE LOAN REPORT
         loanReport = res.getString(R.string.report_line6)
-                + String.format("%10.02f", mAuto.getPrice());
+                + String.format("%10.02f", mGPA.getPrice());
         loanReport += res.getString(R.string.report_line7)
-                + String.format("%10.02f", mAuto.getDownPayment());
+                + String.format("%10.02f", mGPA.getDownPayment());
 
         loanReport += res.getString(R.string.report_line9)
-                + String.format("%18.02f", mAuto.taxAmount());
+                + String.format("%18.02f", mGPA.taxAmount());
         loanReport += res.getString(R.string.report_line10)
-                + String.format("%18.02f", mAuto.totalCost());
+                + String.format("%18.02f", mGPA.totalCost());
         loanReport += res.getString(R.string.report_line11)
-                + String.format("%12.02f", mAuto.borrowedAmount());
+                + String.format("%12.02f", mGPA.borrowedAmount());
         loanReport += res.getString(R.string.report_line12)
-                + String.format("%12.02f", mAuto.interestAmount());
+                + String.format("%12.02f", mGPA.interestAmount());
 
-        loanReport += "\n\n" + res.getString(R.string.report_line8) + " " + mAuto.getLoanTerm() + " years.";
+        loanReport += "\n\n" + res.getString(R.string.report_line8) + " " + mGPA.getLoanTerm() + " years.";
 
         loanReport += "\n\n" + res.getString(R.string.report_line2);
         loanReport += res.getString(R.string.report_line3);
@@ -94,7 +96,7 @@ public class MainActivity extends Activity {
         buildLoanReport();
 
         //TASK 2: CREATE AN INTENT TO DISPLAY THE LOAN SUMMARY ACTIVITY
-        Intent launchReport = new Intent(this, LoanSummaryActivity.class);
+        Intent launchReport = new Intent(this, GPASummaryActivity.class);
 
         //TASK 3: PASS THE LOAN SUMMARY ACTIVITY TWO PIECES OF DATA:
         //     THE LOAN REPORT CONTAINING LOAN DETAILS
